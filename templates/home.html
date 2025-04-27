@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Bem-vindo, {{ session['username'] }}</h1>
+
+    <form method="POST">
+        <label for="bp">Informe o BP</label>
+        <input type="text" id="bp" name="bp" required><br><br>
+        
+        <label for="equipment">Nome do Equipamento</label>
+        <input type="text" id="equipment" name="equipment" required><br><br>
+        
+        <button type="submit">Enviar Requisição</button>
+    </form>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
